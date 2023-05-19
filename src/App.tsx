@@ -1,23 +1,23 @@
-import { useState } from "react";
-import "./App.css";
-
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className="section">
+        <div className="background-video w-background-video">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            data-wf-ignore="true"
+            data-object-fit="cover"
+          >
+            <source src="../transcode.mp4" data-wf-ignore="true" />
+            <source src="../transcode.webm" data-wf-ignore="true" />
+          </video>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div id="my-overlay" className="my-overlay"></div>
+      <div id="convex" className="convex"></div>
     </>
   );
 }
